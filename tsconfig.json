@@ -27,6 +27,7 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./src/*"],
       "~/*": ["./src/*"]
     }
   },
@@ -38,5 +39,5 @@
     "**/*.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "generated"]
+  "exclude": ["node_modules", "generated", "script.js"]
 }

@@ -17,7 +17,7 @@ if (!DATABASE_URL) {
 }
 
 async function markMigrationApplied() {
-  const sql = postgres(DATABASE_URL);
+  const sql = postgres(DATABASE_URL!);
 
   try {
     console.log("🔧 Marking migration as applied...");
@@ -77,4 +77,3 @@ markMigrationApplied()
     console.error("Fatal error:", error);
     process.exit(1);
   });
-
