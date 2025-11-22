@@ -142,7 +142,13 @@ export async function POST(request: Request) {
       },
     });
   } catch (error) {
-    console.error("Login error:", error);
+    // Log full stack when available for better debugging in server logs
+    if (error instanceof Error) {
+      console.error("Login error:", error.stack);
+    } else {
+      console.error("Login error:", error);
+    }
+
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 },
