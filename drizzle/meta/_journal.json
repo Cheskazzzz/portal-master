@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1763731473572,
+      "tag": "0000_married_talon",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1763736365887,
+      "tag": "0001_chemical_luckman",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1763826890742,
+      "tag": "0002_sticky_gabe_jones",
+      "breakpoints": true
+    }
+  ]
+}

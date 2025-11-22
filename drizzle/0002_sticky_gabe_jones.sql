@@ -1,0 +1,1 @@
+ALTER TABLE "portal_user" ADD COLUMN "plainPassword" varchar(256);
