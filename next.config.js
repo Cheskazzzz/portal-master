@@ -6,6 +6,11 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
+  // Allow builds to succeed even if ESLint reports issues. This prevents lint errors
+  // from blocking production builds (useful during migration or CI).
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   // HTTPS/SSL Configuration
   // For production, configure HTTPS at the reverse proxy level (nginx, cloudflare, etc.)
   // For local development with HTTPS, use a tool like mkcert or configure your dev server

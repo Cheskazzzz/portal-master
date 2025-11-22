@@ -99,6 +99,11 @@ export async function POST(request: NextRequest) {
 
     console.log("User created successfully:", newUser[0]);
 
+    if (!newUser || newUser.length === 0 || !newUser[0]) {
+      console.error("Failed to create user: no returning row");
+      return NextResponse.json({ error: "Failed to create user" }, { status: 500 });
+    }
+
     // Log the action
     if (session.userId) {
       await db.insert(auditLogs).values({

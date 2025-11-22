@@ -18,7 +18,6 @@ export const env = createEnv({
     SMTP_PASS: z.string().optional(),
     SMTP_FROM: z.string().email().optional(),
     SMTP_SECURE: z.string().optional(),
-    NEXT_PUBLIC_APP_URL: z.string().url().optional(),
   },
 
   /**

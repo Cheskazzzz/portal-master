@@ -16,9 +16,14 @@ export const columns: ColumnDef<AuditLog>[] = [
   {
     accessorKey: "createdAt",
     header: "Date",
-    cell: (info: CellContext<AuditLog, Date>) => {
-      const value = info.getValue();
-      const date = new Date(value);
+    cell: (info: CellContext<AuditLog, unknown>) => {
+      const value = info.getValue() as string | number | Date | null | undefined;
+
+      if (value === null || value === undefined) return "-";
+
+      const date = new Date(value as any);
+      if (Number.isNaN(date.getTime())) return "-";
+
       return date.toLocaleString();
     },
   },
@@ -38,8 +43,8 @@ export const columns: ColumnDef<AuditLog>[] = [
   {
     accessorKey: "details",
     header: "Details",
-    cell: (info: CellContext<AuditLog, string | null>) => {
-      const details = info.getValue();
+    cell: (info: CellContext<AuditLog, unknown>) => {
+      const details = info.getValue() as string | null | undefined;
 
       if (!details) return "-";
 

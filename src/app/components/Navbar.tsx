@@ -11,14 +11,21 @@ export default function Navbar() {
   const { data: sessionData, isLoading } = api.auth.getSession.useQuery();
 
   const signedIn = !!sessionData;
-  const isAdmin = signedIn && sessionData.roleId === 1;
-  const userInitials = signedIn
-    ? (() => {
-        const name = sessionData.name || sessionData.email;
-        const parts = name.split(/\s+/).filter(Boolean);
-        return parts.length === 1 ? parts[0].slice(0, 2) : (parts[0][0] + parts[parts.length - 1][0]);
-      })().toUpperCase()
-    : '';
+  const isAdmin = Boolean(sessionData?.roleId === 1);
+
+  const userInitials = (() => {
+    const name = sessionData?.name ?? sessionData?.email ?? '';
+    if (!name) return '';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length === 0) return '';
+    if (parts.length === 1) {
+      const single = parts[0] ?? '';
+      return single.slice(0, 2).toUpperCase();
+    }
+    const first = (parts[0] ?? '')[0] ?? '';
+    const last = (parts[parts.length - 1] ?? '')[0] ?? '';
+    return (first + last).toUpperCase();
+  })();
 
   return (
     <header className={styles.nav}>
