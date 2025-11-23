@@ -7,8 +7,8 @@ export default function ContactPage() {
         <section className={styles.left}>
           <h1 className={styles.title}>Contact Us</h1>
           <p className={styles.lead}>
-            For inquiries, please email us at <strong>info@pl-engineering.example</strong>
-            or call <strong>+1 (555) 123-4567</strong>.
+            For inquiries, please email us at <strong>perezloreno.engineering@gmail.com</strong>
+            or call <strong>(044) 617-3794</strong>.
           </p>
         </section>
       </main>

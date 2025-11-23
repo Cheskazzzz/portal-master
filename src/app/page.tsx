@@ -18,11 +18,7 @@ export default function Home() {
           </h1>
 
           <p className={styles.lead}>
-            Perez-Loreño Engineering is a construction company committed to
-            contribute towards the attainment of superior quality service through
-            the delivery of highly competent manpower, reliable maintenance, and
-            construction services. We are inclined to go above and beyond on every
-            project and deliver on our promises with integrity.
+            Perez-Loreño Engineering is a construction company.
           </p>
 
           <div className={styles.cta}>
@@ -56,11 +52,14 @@ export default function Home() {
         <div className={styles.missionContent}>
           <div className={styles.missionItem}>
             <h2>Mission</h2>
-            <p>To be a respectable contractor always delivering beyond expectation.</p>
+            <p>Perez-Loreño Engineering aims to provide only the best for its customers, building with great value in terms of quality, location and price.
+            We shall endeavor to excel in our service by continuous cultivation skills, competencies, positive attitude and performance result. Our business
+            relationships are productive, client focused and service oriented</p>
           </div>
           <div className={styles.missionItem}>
             <h2>Vision</h2>
-            <p>To be an innovator in the field of construction utilizing modern technology to deliver the best possible outcomes to our projects.</p>
+            <p> To be a respectable contractor always delivering beyond expectation. To be an innovator in the field of construction 
+            utilizing modern technology to deliver the best possible outcomes to our projects</p>
           </div>
         </div>
       </section>
@@ -105,20 +104,20 @@ export default function Home() {
         </div>
         <div className={styles.teamGrid}>
           <div className={styles.teamMember}>
-            <h3>Cheska Santiago</h3>
-            <p>Team Member</p>
+            <h3>Engr. Marbel Perez</h3>
+            <p>CEO/Founder</p>
           </div>
           <div className={styles.teamMember}>
-            <h3>Andre James Francisco</h3>
-            <p>Team Member</p>
+            <h3>Engr. Ivan Mari Loreno</h3>
+            <p>CEO/Founder</p>
           </div>
           <div className={styles.teamMember}>
-            <h3>Josh Kevin Holgado</h3>
-            <p>Team Member</p>
+            <h3>Arch. John Carlitos Tiongson</h3>
+            <p>Architect</p>
           </div>
           <div className={styles.teamMember}>
-            <h3>Marco Manaig</h3>
-            <p>Team Member</p>
+            <h3>Ronaldo Nicol Jr.</h3>
+            <p>Corporate Secretary</p>
           </div>
         </div>
       </section>
