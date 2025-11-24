@@ -29,21 +29,13 @@ export default function AboutPage() {
 
         <aside className={styles.right}>
           <div className={styles.imgWrap}>
-            <div
-              className={styles.skew1}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1400&q=80')",
-              }}
-            />
-
-            <div
-              className={styles.skew2}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1529429617124-0a9a0f7d2b6b?auto=format&fit=crop&w=1400&q=80')",
-              }}
-            />
+            {/* Single full rectangle image (uploaded file path) */}
+            <div className={styles.fullImage}>
+              <img
+                src="team.png"
+                alt="About Us"
+              />
+            </div>
           </div>
         </aside>
       </main>

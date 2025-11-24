@@ -29,21 +29,13 @@ export default function Home() {
 
         <aside className={styles.right}>
           <div className={styles.imgWrap}>
-            <div
-              className={styles.skew1}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600')",
-              }}
-            />
-
-            <div
-              className={styles.skew2}
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1590845947670-c009801ffa74?w=600')",
-              }}
-            />
+            {/* Single full rectangle image (uploaded file) */}
+            <div className={styles.fullImage}>
+              <img
+                src="/home.png"
+                alt="HomepageImage"
+              />
+            </div>
           </div>
         </aside>
       </main>
